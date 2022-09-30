@@ -1,0 +1,33 @@
+1. Explain what the simple List component does.
+
+Ans- List component is simply used to display an unordered list, which may contains text as list items.
+     In below mentioned component WrappedListComponent created an unordered list, it take an array  
+     of strings, and traverse with the help of map, and show the list, list shown with red bg color by 
+     default, if user will click on item, onClick() get triggered and bg color get change with green.
+_______________________________________________________________________________________________________
+
+2. What problems/warnings are there with the code?
+
+Ans- Warnings that i try to figure out in mentioned code:
+		-> _propTypes.default.shapeOf is not a function
+		-> Calling PropTypes validators directly is not supported by the `prop-types` package.
+		   Use `PropTypes.checkPropTypes()` to call them.
+		-> Cannot read properties of null (reading 'map')
+		-> setSelectedIndex is not a function.
+    
+     Problems/Good Practice that can optimize the below code:
+     
+     -> onClick events should pass through reference, so function won't get created again at the time of 			 
+        render.
+        <li style={{ backgroundColor: isSelected ? "green" : "red" }}
+     onClick={onClickHandler(index)}>
+      {text}
+      </li>
+        
+_______________________________________________________________________________________________________
+
+
+    
+    
+
+
